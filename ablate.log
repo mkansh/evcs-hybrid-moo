@@ -1,0 +1,8 @@
+continuous (published)                     median 0.488 mean 0.481 SD 0.134  poor(<0.35): 7  (134 s)
+integer init only                          median 0.507 mean 0.529 SD 0.140  poor(<0.35): 4  (140 s)
+init + crossover                           median 0.723 mean 0.701 SD 0.047  poor(<0.35): 0  (147 s)
+init + mutation                            median 0.731 mean 0.728 SD 0.012  poor(<0.35): 0  (145 s)
+crossover + mutation (continuous init)     median 0.741 mean 0.739 SD 0.005  poor(<0.35): 0  (153 s)
+full integer encoding                      median 0.741 mean 0.741 SD 0.000  poor(<0.35): 0  (168 s)
+continuous polynomial mutation (eta=20): P(bus changes | gene mutated) = 0.715; mean |step| when changed = 1.89 buses
+integer mutation: P(bus changes | gene mutated) = 0.969; mean |step| when changed = 6.50 buses

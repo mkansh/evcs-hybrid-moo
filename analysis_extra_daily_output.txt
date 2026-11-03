@@ -1,0 +1,50 @@
+pooled reference front (seeds 300-329 DAILY, both encodings, 5 solvers): 961 points, HV_ref = 0.681
+
+=== encoding: real ===
+solver      mean HV  median     SD rec% med #<50% #>=95%  s/run
+NSGA-II       0.403   0.385  0.143     56.6     6      3   3.96
+HNSGA-PSO     0.445   0.414  0.143     60.8     2      1   4.28
+MOEA/D        0.400   0.457  0.142     67.1     6      1   8.35
+NSGA-III      0.407   0.379  0.151     55.7     6      2   3.81
+MOPSO         0.439   0.385  0.129     56.6     2      2   4.08
+Kruskal-Wallis H=0.84, p=9.33e-01; Friedman (descriptive, seeds as blocks) chi2=2.49, p=6.47e-01
+mean Friedman ranks (1 = best): NSGA-II 2.95, HNSGA-PSO 2.77, MOEA/D 3.03, NSGA-III 3.37, MOPSO 2.88
+pairwise Wilcoxon rank-sum, Holm over 10 pairs (A12 = P(first > second)):
+   NSGA-II    vs HNSGA-PSO   p=0.7062  Holm p=1.0000  A12=0.47
+   NSGA-II    vs MOEA/D      p=0.6256  Holm p=1.0000  A12=0.46
+   NSGA-II    vs NSGA-III    p=0.6309  Holm p=1.0000  A12=0.54
+   NSGA-II    vs MOPSO       p=0.6898  Holm p=1.0000  A12=0.47
+   HNSGA-PSO  vs MOEA/D      p=0.8650  Holm p=1.0000  A12=0.49
+   HNSGA-PSO  vs NSGA-III    p=0.5844  Holm p=1.0000  A12=0.54
+   HNSGA-PSO  vs MOPSO       p=0.9528  Holm p=1.0000  A12=0.50
+   MOEA/D     vs NSGA-III    p=0.5059  Holm p=1.0000  A12=0.55
+   MOEA/D     vs MOPSO       p=0.7788  Holm p=1.0000  A12=0.52
+   NSGA-III   vs MOPSO       p=0.4598  Holm p=1.0000  A12=0.44
+paired signed-rank (shared initial populations) HNSGA-PSO vs NSGA-II: p=0.1579, mean diff=+0.0416
+
+=== encoding: discrete ===
+solver      mean HV  median     SD rec% med #<50% #>=95%  s/run
+NSGA-II       0.680   0.681  0.001    100.0     0     30   4.25
+HNSGA-PSO     0.678   0.681  0.007    100.0     0     30   4.49
+MOEA/D        0.668   0.669  0.005     98.3     0     30   8.73
+NSGA-III      0.671   0.673  0.008     98.8     0     29   4.14
+MOPSO         0.679   0.680  0.004    100.0     0     30   4.27
+Kruskal-Wallis H=84.98, p=1.53e-17; Friedman (descriptive, seeds as blocks) chi2=72.51, p=6.71e-15
+mean Friedman ranks (1 = best): NSGA-II 1.80, HNSGA-PSO 2.20, MOEA/D 4.53, NSGA-III 4.10, MOPSO 2.37
+pairwise Wilcoxon rank-sum, Holm over 10 pairs (A12 = P(first > second)):
+   NSGA-II    vs HNSGA-PSO   p=0.5543  Holm p=1.0000  A12=0.54
+   NSGA-II    vs MOEA/D      p=0.0000  Holm p=0.0000  A12=1.00
+   NSGA-II    vs NSGA-III    p=0.0000  Holm p=0.0000  A12=0.99
+   NSGA-II    vs MOPSO       p=0.1474  Holm p=0.4421  A12=0.61
+   HNSGA-PSO  vs MOEA/D      p=0.0000  Holm p=0.0000  A12=0.87
+   HNSGA-PSO  vs NSGA-III    p=0.0000  Holm p=0.0000  A12=0.86
+   HNSGA-PSO  vs MOPSO       p=0.7675  Holm p=1.0000  A12=0.52
+   MOEA/D     vs NSGA-III    p=0.0028  Holm p=0.0113  A12=0.28
+   MOEA/D     vs MOPSO       p=0.0000  Holm p=0.0000  A12=0.03
+   NSGA-III   vs MOPSO       p=0.0000  Holm p=0.0000  A12=0.08
+paired signed-rank (shared initial populations) HNSGA-PSO vs NSGA-II: p=0.1191, mean diff=-0.0028
+encoding effect NSGA-II   : median HV real 0.385 -> discrete 0.681; A12=1.00
+encoding effect HNSGA-PSO : median HV real 0.414 -> discrete 0.681; A12=1.00
+encoding effect MOEA/D    : median HV real 0.457 -> discrete 0.669; A12=1.00
+encoding effect NSGA-III  : median HV real 0.379 -> discrete 0.673; A12=1.00
+encoding effect MOPSO     : median HV real 0.385 -> discrete 0.680; A12=1.00

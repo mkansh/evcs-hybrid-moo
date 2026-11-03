@@ -1,0 +1,9 @@
+0 1 s
+100 152 s
+200 307 s
+300 463 s
+400 618 s
+500 782 s
+plans 540672 feasible 203712 loss range 850.2-1459.4 MWh
+loss correlation, PV bus +-1 index neighbour: 0.943; WT bus +-1: 0.942; random partner: 0.002
+local optima of annual loss under +-1 index moves: 1589 of 203712 feasible plans (0.78%)

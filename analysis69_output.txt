@@ -1,0 +1,47 @@
+union of run fronts: 16128
+pooled reference front: 1374 ranges [2.53561109e+06 8.25933000e+02 3.80000000e-02 1.48168690e+04] [2.59108945e+06 8.90637000e+02 4.00000000e-02 1.48683690e+04]
+HV of pooled reference: 0.847
+
+=== 69-bus + BESS, 4 objectives, real encoding (seeds 400-429) ===
+NSGA-II    median HV 0.240 [0.000-0.389] mean 0.207 SD 0.206 | median IGD+ 0.3922 | s/run 9.4
+HNSGA-PSO  median HV 0.000 [0.000-0.436] mean 0.180 SD 0.229 | median IGD+ 2.4401 | s/run 8.8
+MOEA/D     median HV 0.350 [0.000-0.394] mean 0.255 SD 0.218 | median IGD+ 0.2986 | s/run 16.8
+NSGA-III   median HV 0.100 [0.000-0.337] mean 0.166 SD 0.177 | median IGD+ 0.5594 | s/run 8.8
+MOPSO      median HV 0.000 [0.000-0.402] mean 0.185 SD 0.236 | median IGD+ 2.4408 | s/run 9.0
+Kruskal-Wallis p = 7.02e-01; Holm-adjusted rank-sum (10 pairs):
+   NSGA-II    vs HNSGA-PSO  Holm p=1.0000 A12=0.54
+   NSGA-II    vs MOEA/D     Holm p=1.0000 A12=0.45
+   NSGA-II    vs NSGA-III   Holm p=1.0000 A12=0.56
+   NSGA-II    vs MOPSO      Holm p=1.0000 A12=0.53
+   HNSGA-PSO  vs MOEA/D     Holm p=1.0000 A12=0.43
+   HNSGA-PSO  vs NSGA-III   Holm p=1.0000 A12=0.49
+   HNSGA-PSO  vs MOPSO      Holm p=1.0000 A12=0.49
+   MOEA/D     vs NSGA-III   Holm p=1.0000 A12=0.61
+   MOEA/D     vs MOPSO      Holm p=1.0000 A12=0.56
+   NSGA-III   vs MOPSO      Holm p=1.0000 A12=0.51
+
+=== 69-bus + BESS, 4 objectives, discrete encoding (seeds 400-429) ===
+NSGA-II    median HV 0.651 [0.572-0.689] mean 0.616 SD 0.103 | median IGD+ 0.0910 | s/run 10.3
+HNSGA-PSO  median HV 0.678 [0.652-0.691] mean 0.649 SD 0.081 | median IGD+ 0.0782 | s/run 9.5
+MOEA/D     median HV 0.696 [0.635-0.710] mean 0.656 SD 0.091 | median IGD+ 0.0624 | s/run 16.8
+NSGA-III   median HV 0.664 [0.556-0.688] mean 0.607 SD 0.109 | median IGD+ 0.0832 | s/run 9.4
+MOPSO      median HV 0.660 [0.544-0.685] mean 0.606 SD 0.103 | median IGD+ 0.0875 | s/run 9.6
+Kruskal-Wallis p = 1.86e-02; Holm-adjusted rank-sum (10 pairs):
+   NSGA-II    vs HNSGA-PSO  Holm p=1.0000 A12=0.42
+   NSGA-II    vs MOEA/D     Holm p=0.2968 A12=0.34
+   NSGA-II    vs NSGA-III   Holm p=1.0000 A12=0.54
+   NSGA-II    vs MOPSO      Holm p=1.0000 A12=0.56
+   HNSGA-PSO  vs MOEA/D     Holm p=0.4864 A12=0.37
+   HNSGA-PSO  vs NSGA-III   Holm p=0.8925 A12=0.60
+   HNSGA-PSO  vs MOPSO      Holm p=0.3216 A12=0.65
+   MOEA/D     vs NSGA-III   Holm p=0.2580 A12=0.66
+   MOEA/D     vs MOPSO      Holm p=0.0172 A12=0.74
+   NSGA-III   vs MOPSO      Holm p=1.0000 A12=0.52
+
+Encoding effect per solver (integer vs continuous):
+  NSGA-II    median 0.240 -> 0.651  A12=0.97  p=0.0000
+  HNSGA-PSO  median 0.000 -> 0.678  A12=0.97  p=0.0000
+  MOEA/D     median 0.350 -> 0.696  A12=0.96  p=0.0000
+  NSGA-III   median 0.100 -> 0.664  A12=0.98  p=0.0000
+  MOPSO      median 0.000 -> 0.660  A12=0.94  p=0.0000
+knee BESS (kWh, kW) over runs, integer NSGA-II: median [801. 197.] IQR E [293. 974.]

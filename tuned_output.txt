@@ -1,0 +1,53 @@
+seeds 800-829, legacy scenario; HV on the fixed normalisation of the pooled 300-329 front (reference HV 0.741)
+solver     setting        median   mean     SD  poor
+NSGA-II    default_cont    0.507  0.494  0.117     4
+NSGA-II    tuned_cont      0.627  0.600  0.130     2
+NSGA-II    default_int     0.741  0.739  0.004     0
+HNSGA-PSO  default_cont    0.488  0.534  0.093     1
+HNSGA-PSO  tuned_cont      0.610  0.562  0.121     2
+HNSGA-PSO  default_int     0.740  0.736  0.007     0
+MOEA/D     default_cont    0.461  0.436  0.186    11
+MOEA/D     tuned_cont      0.721  0.694  0.080     1
+MOEA/D     default_int     0.726  0.717  0.025     0
+NSGA-III   default_cont    0.502  0.514  0.133     5
+NSGA-III   tuned_cont      0.644  0.617  0.105     0
+NSGA-III   default_int     0.733  0.732  0.006     0
+MOPSO      default_cont    0.507  0.542  0.094     1
+MOPSO      tuned_cont      0.631  0.622  0.093     0
+MOPSO      default_int     0.741  0.739  0.004     0
+
+Within-algorithm effects (Mann-Whitney, Holm over 10 tests; A12 = P(first > second)):
+  NSGA-II    tuned_cont   vs default_cont p=0.0042 Holm=0.0126 A12=0.72  median diff +0.120
+  NSGA-II    default_int  vs tuned_cont   p=0.0000 Holm=0.0000 A12=0.93  median diff +0.114
+  HNSGA-PSO  tuned_cont   vs default_cont p=0.2488 Holm=0.2488 A12=0.59  median diff +0.122
+  HNSGA-PSO  default_int  vs tuned_cont   p=0.0000 Holm=0.0000 A12=0.98  median diff +0.130
+  MOEA/D     tuned_cont   vs default_cont p=0.0000 Holm=0.0000 A12=0.92  median diff +0.260
+  MOEA/D     default_int  vs tuned_cont   p=0.0785 Holm=0.1570 A12=0.63  median diff +0.005
+  NSGA-III   tuned_cont   vs default_cont p=0.0014 Holm=0.0058 A12=0.74  median diff +0.143
+  NSGA-III   default_int  vs tuned_cont   p=0.0000 Holm=0.0000 A12=0.98  median diff +0.089
+  MOPSO      tuned_cont   vs default_cont p=0.0005 Holm=0.0026 A12=0.76  median diff +0.123
+  MOPSO      default_int  vs tuned_cont   p=0.0000 Holm=0.0000 A12=0.94  median diff +0.110
+
+Between solvers, tuned_cont: Kruskal-Wallis p=1.03e-05
+   NSGA-II    vs HNSGA-PSO  p=0.2116 Holm=0.8462 A12=0.59
+   NSGA-II    vs MOEA/D     p=0.0007 Holm=0.0050 A12=0.25
+   NSGA-II    vs NSGA-III   p=0.9058 Holm=1.0000 A12=0.49
+   NSGA-II    vs MOPSO      p=0.5250 Holm=1.0000 A12=0.45
+   HNSGA-PSO  vs MOEA/D     p=0.0000 Holm=0.0000 A12=0.14
+   HNSGA-PSO  vs NSGA-III   p=0.1602 Holm=0.8008 A12=0.39
+   HNSGA-PSO  vs MOPSO      p=0.0345 Holm=0.2070 A12=0.34
+   MOEA/D     vs NSGA-III   p=0.0001 Holm=0.0013 A12=0.79
+   MOEA/D     vs MOPSO      p=0.0002 Holm=0.0018 A12=0.78
+   NSGA-III   vs MOPSO      p=0.7007 Holm=1.0000 A12=0.47
+
+Between solvers, default_int: Kruskal-Wallis p=2.19e-17
+   NSGA-II    vs HNSGA-PSO  p=0.0023 Holm=0.0070 A12=0.73
+   NSGA-II    vs MOEA/D     p=0.0000 Holm=0.0000 A12=0.97
+   NSGA-II    vs NSGA-III   p=0.0000 Holm=0.0000 A12=0.93
+   NSGA-II    vs MOPSO      p=0.1691 Holm=0.1691 A12=0.60
+   HNSGA-PSO  vs MOEA/D     p=0.0000 Holm=0.0000 A12=0.88
+   HNSGA-PSO  vs NSGA-III   p=0.0007 Holm=0.0028 A12=0.75
+   HNSGA-PSO  vs MOPSO      p=0.0428 Holm=0.0856 A12=0.35
+   MOEA/D     vs NSGA-III   p=0.0000 Holm=0.0000 A12=0.14
+   MOEA/D     vs MOPSO      p=0.0000 Holm=0.0000 A12=0.02
+   NSGA-III   vs MOPSO      p=0.0000 Holm=0.0000 A12=0.09
