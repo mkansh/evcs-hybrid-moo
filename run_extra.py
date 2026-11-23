@@ -9,7 +9,7 @@ from algos_extra import nsga3, mopso
 out = sys.argv[1]
 SEEDS = range(300, 330)
 sc = make_scenarios()
-print('scenario:', model.SCEN_MODE, '| encoding:', algos.ENC, flush=True)
+print('scenario:', getattr(model, 'SCEN_MODE', 'legacy'), '| encoding:', algos.ENC, flush=True)   # model.py has no daily mode; legacy only
 res, times = {}, {}
 for name in ['NSGA-II', 'HNSGA-PSO', 'MOEA/D', 'NSGA-III', 'MOPSO']:
     res[name] = []; ts = time.time()

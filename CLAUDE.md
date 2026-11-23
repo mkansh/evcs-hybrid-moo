@@ -178,10 +178,11 @@ Match the existing style rather than reformatting:
 
 ## Known issues
 
-- `run_extra.py` fails at startup: it prints `model.SCEN_MODE`, but `model.py`
-  has no `SCEN_MODE`, and the "daily-feature" scenario set used for
-  `res_extra_daily_*.pkl` is not implemented in the committed `model.py`.
-  The daily results cannot be regenerated from the current code.
+- The "daily-feature" scenario set used for `res_extra_daily_*.pkl` is not
+  implemented in the committed `model.py` (no `SCEN_MODE`), so the daily results
+  cannot be regenerated. `run_extra.py` runs the legacy set only; it reproduces
+  `res_extra_{real,discrete}.pkl` exactly (checked on NSGA-II, seed 300: max abs
+  difference 0.0).
 - `figs.py` writes to `figs/`, which does not exist; run `mkdir -p figs` first.
   (`figs_pub.py` creates its own folder.)
 - `analyze69.py` and `analyze_equiv.py` write `analysis69.pkl` and `equiv.pkl`,
