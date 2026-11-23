@@ -88,7 +88,7 @@ or `algos_extra.py`.
 python3 run_all.py    # ~7 min, seeds 100-129 -> results.pkl
 python3 analyze.py    # -> metrics.pkl, stats.json
 python3 sens.py       # Table 12, seeds 101-103 -> sens.pkl
-python3 figs.py       # writes figs/  (mkdir figs first, see Known issues)
+python3 figs.py       # Figs. 6-11 -> figs/ (created automatically)
 python3 figs_pub.py   # publication versions -> figs_pub/ (png + pdf)
 ```
 
@@ -183,8 +183,6 @@ Match the existing style rather than reformatting:
   cannot be regenerated. `run_extra.py` runs the legacy set only; it reproduces
   `res_extra_{real,discrete}.pkl` exactly (checked on NSGA-II, seed 300: max abs
   difference 0.0).
-- `figs.py` writes to `figs/`, which does not exist; run `mkdir -p figs` first.
-  (`figs_pub.py` creates its own folder.)
 - `analyze69.py` and `analyze_equiv.py` write `analysis69.pkl` and `equiv.pkl`,
   which are not committed.
 - No `.gitignore`; be careful not to commit scratch outputs.

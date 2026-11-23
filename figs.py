@@ -1,9 +1,10 @@
-import numpy as np, pickle, json
+import numpy as np, pickle, json, os
 import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from model import *
 from algos import nds
+os.makedirs('figs', exist_ok=True)   # output folder for Figs. 6-11
 res=pickle.load(open('results.pkl','rb')); mt=pickle.load(open('metrics.pkl','rb')); M=mt['M']; ideal,nadir=mt['ideal'],mt['nadir']
 names=['NSGA-II','HNSGA-PSO','MOEA/D']
 col={'NSGA-II':'#7f7f7f','HNSGA-PSO':'#0072B2','MOEA/D':'#D55E00'}
